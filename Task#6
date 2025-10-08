@@ -7,5 +7,5 @@ removeAt i (x:xs)
 
 main :: IO ()
 main = do
-    print $ removeAt 1 [10, 20, 30]  -- [10, 30]
-    print $ removeAt 5 [1, 2, 3]     -- [1, 2, 3]
+    print $ removeAt 1 [10, 20, 30]  
+    print $ removeAt 5 [1, 2, 3]     
