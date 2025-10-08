@@ -1,0 +1,9 @@
+def update_dict(original: dict, key, value) -> dict:
+    return {**original, key: value}
+
+
+d1 = {'a': 1, 'b': 2}
+d2 = update_dict(d1, 'b', 99)
+
+print(d2)  # {'a': 1, 'b': 99}
+print(d1)  # {'a': 1, 'b': 2}  
