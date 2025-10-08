@@ -1,0 +1,12 @@
+updateAt :: Int -> a -> [a] -> [a]
+updateAt _ _ [] = []  
+updateAt 0 newVal (_:xs) = newVal : xs  
+updateAt i newVal (x:xs)
+    | i < 0     = x:xs  
+    | otherwise = x : updateAt (i-1) newVal xs  
+
+
+
+main :: IO ()
+main = do
+    print $ updateAt 1 99 [10, 20, 30]
