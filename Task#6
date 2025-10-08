@@ -1,0 +1,11 @@
+removeAt :: Int -> [a] -> [a]
+removeAt _ [] = []  
+removeAt 0 (_:xs) = xs 
+removeAt i (x:xs)
+    | i < 0     = x:xs  
+    | otherwise = x : removeAt (i-1) xs 
+
+main :: IO ()
+main = do
+    print $ removeAt 1 [10, 20, 30]  -- [10, 30]
+    print $ removeAt 5 [1, 2, 3]     -- [1, 2, 3]
